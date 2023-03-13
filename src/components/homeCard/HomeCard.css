@@ -1,0 +1,44 @@
+.homeCard__container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.homeCard__signIn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home__p{
+    font-size: 20px;
+}
+
+.home__p2{
+    color: rgb(135, 135, 135);
+    margin-bottom: 20px;
+}
+
+.createPost_p{
+    margin-left: 1px;
+    color: rgb(144, 44, 44);
+    font-size: 15px;
+    margin-top: 10px;
+    padding-bottom: 15px;
+}
+
+@media (max-width:1250px) {
+    .homeCard__container{
+        flex-wrap: wrap;
+        
+    }
+}
+
+@media (max-width:786px) {
+    .homeCard__container{
+        width: 80%;
+        display: block;
+        margin: 0 auto;
+        width: 500px;
+    }
+}
+
