@@ -1,0 +1,92 @@
+.login__container {
+    padding-top: 4%;
+    background-color: #f1f0eee2;
+    display: flex;
+    justify-content: center;
+}
+
+.login__box{
+    padding-top: 3%;
+    background-color: white;
+    height: 70vh;
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 2px 5px 5px 5px rgb(212, 210, 210);
+    border-radius: 5px;
+}
+
+.login__h2{
+    padding-top: 5%;
+    font-weight: 600;
+    color: rgb(111, 39, 39);
+}
+
+.login__email{
+    height: 45px;
+    width: 40vh;
+    font-size: 20px;
+    margin-top: 15%;
+    border: 1px solid;
+    border-color: rgb(46, 50, 94);
+    border-radius: 5px;
+    text-align: center;
+    background-color: aliceblue;
+}
+
+.login__email:focus{
+    outline: none;
+}
+
+.login__password{
+    height: 45px;
+    width: 40vh;
+    font-size: 20px;
+    border: 1px solid;
+    border-color: rgb(46, 50, 94);
+    border-radius: 5px;
+    text-align: center;
+    background-color: aliceblue;
+}
+
+.login__login{
+    height: 45px;
+    width: 40vh;
+    font-size: 20px;
+    margin-top: 12%;
+    border: 1px solid;
+    border-color: rgb(21, 38, 225);
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    background-color: rgb(28, 133, 226);
+    cursor: pointer;
+}
+
+.login__google{
+    margin-top: 5%;
+}
+
+.login__signUp{
+    color: rgb(96, 131, 238);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+@media (max-width:1350px) {
+    .login__box {
+        width: 55%;
+    }
+}
+
+
+@media screen and (max-width:786px) {
+    .login__box {
+        height: 68vh;
+        width: 85%;
+    }
+}
+
+
