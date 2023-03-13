@@ -1,0 +1,17 @@
+.signInBtn{
+    background-color: #de5246;
+    max-width: 300px;
+    text-align: center;
+    padding: 10px 16px;
+    border-radius: 4px;
+    color: white;
+    font-size: 18px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.signIn__link{
+    text-decoration: none;
+    color: white;
+}
+
