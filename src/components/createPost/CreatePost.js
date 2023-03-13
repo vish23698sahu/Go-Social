@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { UserContext } from '../../contexts/user';
-import AddAPhotoIcon from '@material-ui/icons/AddAPhoto';
+import { MdAddAPhoto } from 'react-icons/md';
 import './CreatePost.css';
 import makeId from '../../helper/functions';
 import { db, storage } from '../../firebase';
@@ -79,7 +79,7 @@ export default function CreatePost() {
                 <div className='createPost__Bottom' >
                     <div className='createPost__ImageUpload' >
                         <label htmlFor='fileInput'>
-                            <AddAPhotoIcon style={{ cursor: 'pointer', fontSize: '23px' }} />
+                            <MdAddAPhoto style={{ cursor: 'pointer', fontSize: '23px' }} />
                         </label>
                         <input id='fileInput' type='file' accept='image/*' onChange={handleImgChange} />
                     </div>
