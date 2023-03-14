@@ -25,6 +25,7 @@
 .createPost__uploadBtn{
     border: none;
     background-color: white;
+    cursor: pointer;
 }
 
 .createPost__Bottom{
@@ -49,4 +50,6 @@
     margin: 12px 6px;
 }
 
-
+.greenColor{
+    color: rgb(56, 230, 56);
+}

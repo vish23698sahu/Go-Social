@@ -12,8 +12,7 @@ export default function Register() {
     const signUpClickHandler = async (e) => {
         e.preventDefault();
         try {
-            const result = await signUp(email, password)
-            console.log(result);
+            await signUp(email, password);
         } catch (error) {
             console.log(error);
         }

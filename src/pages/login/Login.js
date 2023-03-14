@@ -12,8 +12,7 @@ export default function Login() {
     const loginClickHandler = async (e) => {
         e.preventDefault();
         try {
-            const result = await login(email, password)
-            console.log(result);
+            await login(email, password);
         }
         catch (error) {
             console.log('Failed to sign in ', error);

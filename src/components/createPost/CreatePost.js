@@ -83,8 +83,8 @@ export default function CreatePost() {
                         </label>
                         <input id='fileInput' type='file' accept='image/*' onChange={handleImgChange} />
                     </div>
-                    <button className='createPost__uploadBtn' onClick={handleUpload} style={{ color: caption ? "#000" : "lightgrey" }} >
-                        {`Upload ${progress !== 0 ? `${progress}%` : ""}`}
+                    <button className={`${progress === 100 ? 'greenColor' : ''} createPost__uploadBtn`} onClick={handleUpload} style={{ color: caption ? "#000" : "lightgrey" }} >
+                        {progress === 100 ? 'done' : `Upload ${progress !== 0 ? `${progress}%` : ""}`}
                     </button>
                 </div>
             </div>
