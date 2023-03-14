@@ -38,6 +38,7 @@ export default function HomeCard(props) {
                         photoURL={post.photoUrl}
                         caption={post.caption}
                         comments={post.comments}
+                        noDelete={true}
                     />
                 })}
             </div>

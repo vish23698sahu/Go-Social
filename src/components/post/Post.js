@@ -6,7 +6,7 @@ import Comment from '../comment/Comment';
 import CommentInput from '../commentInput/CommentInput';
 import './Post.css';
 
-export default function Post({ profileUrl, username, id, photoURL, caption, comments }) {
+export default function Post({ profileUrl, username, id, photoURL, caption, comments, noDelete }) {
     const [user] = useContext(UserContext).user;
 
     const deletePost = () => {
@@ -39,7 +39,7 @@ export default function Post({ profileUrl, username, id, photoURL, caption, comm
                     <img src={profileUrl} alt={profileUrl} className='post__profilePic' />
                     <p style={{ marginLeft: '8px', fontWeight: '500' }} >{username}</p>
                 </div>
-                <button onClick={deletePost} className='post__delete' ><AiFillDelete /> </button>
+                {noDelete ? '' : <button onClick={deletePost} className='post__delete' ><AiFillDelete /> </button>}
             </div>
             <div className='post__center'>
                 <img src={photoURL} alt={photoURL} className='post__photoURL' />
