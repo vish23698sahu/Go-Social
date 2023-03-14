@@ -11,24 +11,29 @@ export default function Post({ profileUrl, username, id, photoURL, caption, comm
 
     const deletePost = () => {
         // delete the image from firebase storage
-
+        //get ref to the image file to delete
         var imageRef = storage.refFromURL(photoURL);
 
-        imageRef.delete()
-            .then(function () {
-                console.log("deleted successfully");
-            })
-            .catch((error) => {
-                console.log(error);
-            });
-
-        db.collection("posts").doc(id).delete()
-            .then(() => {
-                console.log("deleted post successfully");
-            })
-            .catch((error) => {
-                console.log(`Error post : ${error}`);
-            });
+        // user can only delete their own posts: 
+        if (username === user.email.replace('@gmail.com', '')) {
+            imageRef.delete()
+                .then(function () {
+                    console.log("deleted successfully");
+                })
+                .catch((error) => {
+                    console.log(error);
+                });
+            db.collection("posts").doc(id).delete()
+                .then(() => {
+                    console.log("deleted post successfully");
+                })
+                .catch((error) => {
+                    console.log(`Error post : ${error}`);
+                });
+        }
+        else {
+            alert("You don't have permission to delete someone else's post");
+        }
 
     }
 
@@ -60,9 +65,7 @@ export default function Post({ profileUrl, username, id, photoURL, caption, comm
                     : <></>
             }
 
-            {
-                user ? <CommentInput comments={comments} id={id} /> : <></>
-            }
+            {user ? <CommentInput comments={comments} id={id} /> : <></>}
 
         </div>
     )
