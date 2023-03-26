@@ -19,7 +19,6 @@ export default function Login() {
             setValidForm(false);
             return;
         }
-
         try {
             let userBySignIn = await login(email, password);
 

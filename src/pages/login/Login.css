@@ -76,6 +76,7 @@
 
 .login__valid{
     color: rgb(243, 46, 46);
+    font-size: 15px;
 }
 
 
@@ -85,12 +86,9 @@
     }
 }
 
-
 @media screen and (max-width:786px) {
     .login__box {
         height: 68vh;
         width: 85%;
     }
 }
-
-
