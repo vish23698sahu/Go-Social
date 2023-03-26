@@ -74,6 +74,10 @@
     text-decoration: none;
 }
 
+.login__valid{
+    color: rgb(243, 46, 46);
+}
+
 
 @media (max-width:1350px) {
     .login__box {

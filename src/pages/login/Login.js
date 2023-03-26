@@ -8,11 +8,18 @@ export default function Login() {
     const [, setUser] = useContext(UserContext).user;
     const { login } = useContext(UserContext);
     const [email, setEmail] = useState('');
-    const [password, setPassword] = useState();
+    const [password, setPassword] = useState('');
+    const [validForm, setValidForm] = useState(true);
     const navigate = useNavigate();
 
     const loginClickHandler = async (e) => {
         e.preventDefault();
+
+        if (email === '' || password === '') {
+            setValidForm(false);
+            return;
+        }
+
         try {
             let userBySignIn = await login(email, password);
 
@@ -26,13 +33,26 @@ export default function Login() {
         }
     }
 
+    const emailChangeHandler = (e) => {
+        setValidForm(true);
+        setEmail(e.target.value);
+    }
+
+    const passwordChangeHandler = (e) => {
+        setValidForm(true);
+        setPassword(e.target.value);
+    }
+
     return (
         <div className='login__container' >
             <div className='login__box' >
                 <form>
                     <h2 className='login__h2' >Login</h2>
-                    <input className='login__email' type='text' value={email} placeholder='email' onChange={(e) => setEmail(e.target.value)} /><br /><br />
-                    <input className='login__password' type='password' password={password} placeholder='password' onChange={(e) => setPassword(e.target.value)} /><br />
+                    {
+                        validForm ? '' : <p className='login__valid'>Please enter email and password</p>
+                    }
+                    <input className='login__email' type='text' value={email} placeholder='email' onChange={emailChangeHandler} /><br /><br />
+                    <input className='login__password' type='password' password={password} placeholder='password' onChange={passwordChangeHandler} /><br />
 
                     <button className='login__login' onClick={loginClickHandler} >Login</button><br /><br /><br />
                     <hr /><br />
@@ -45,5 +65,5 @@ export default function Login() {
                 </form>
             </div>
         </div>
-    )
+    );
 }
