@@ -8,14 +8,13 @@ export default function Navbar() {
 
     return (
         <div className='navbar'>
-            <Link to='/' className='navbar__logo' >Go Social</Link>
+            <Link to='/' className='navbar__logo'>GoSocial</Link>
 
-            {user ? <p className='navbar__home' > <span className='navbar__homeColor' >Welcome Home</span> {user.displayName} !</p> : ''}
+            {user ? <p className='navbar__home'> <span className='navbar__homeColor' >Welcome Home</span> {user.displayName} !</p> : ''}
             {user ? <img className='navbar__img' src={user.photoURL} alt='user' />
                 :
-                <Link className='navbar__login' to='/login' >Log In</Link>
+                <Link className='navbar__login' to='/login'>Log In</Link>
             }
         </div>
     )
 }
-
