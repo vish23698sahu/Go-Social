@@ -29,7 +29,6 @@
 @media (max-width:1250px) {
     .homeCard__container{
         flex-wrap: wrap;
-        
     }
 }
 
@@ -41,4 +40,3 @@
         width: 500px;
     }
 }
-

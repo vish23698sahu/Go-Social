@@ -8,7 +8,6 @@ export default function HomeLogged() {
         <div className='homeLogged'>
             <CreatePost />
             <Feed />
-
         </div>
     )
 }
