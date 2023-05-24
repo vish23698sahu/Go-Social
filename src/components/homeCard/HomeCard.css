@@ -3,6 +3,10 @@
     justify-content: space-evenly;
 }
 
+.homeCard_main{
+    width: 100%;
+}
+
 .homeCard__signIn{
     display: flex;
     flex-direction: column;
@@ -22,8 +26,60 @@
     margin-left: 1px;
     color: rgb(144, 44, 44);
     font-size: 15px;
-    margin-top: 10px;
+    margin-top: 5px;
     padding-bottom: 15px;
+}
+
+.home__Cardcontainer{
+    display: flex;
+    flex-direction: column;
+}
+
+.homeCard__Card{
+    margin-left: 26%;
+    width: 29%;
+    padding: 3% 8%;
+    height: 200px;
+    background: rgb(103,103,104);
+    background: linear-gradient(90deg, rgba(103,103,104,1) 0%, rgba(228,228,231,1) 100%);
+    border: 1px solid rgb(28, 28, 72);
+    border-radius: 40px;
+    margin-bottom: 4%;
+    transition: ease-out .4s;
+}
+
+.homeCard__Card:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.card_text{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 12%;
+}
+
+.text_container{
+    max-width: 90%;
+}
+
+.text_container h3{
+    font-size: 26px;
+}
+
+.text_container p{
+    font-size: 18px;
+}
+
+.iconn{
+    font-size: 40px;
+    transition: ease-out .4s;
+}
+
+.iconn:hover{
+    transform: scale(1.1);
+    cursor: pointer;
 }
 
 @media (max-width:1250px) {
